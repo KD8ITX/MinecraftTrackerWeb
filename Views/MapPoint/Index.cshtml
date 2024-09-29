@@ -1,0 +1,36 @@
+﻿@model List<MapPoint>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Explicitly setting the layout
+    //Layout = null;
+    ViewData["Title"] = "Map Points";
+}
+
+<div class="text-center">
+    <h1 class="display-4 text-light">Manage Map Points!!!</h1>
+</div>
+<div class="text-left">
+    <a class="text-light" asp-controller="MapPoint" asp-action="Add">Add a Map Point</a>
+
+</div>
+
+<div class="text-left">
+    <table class="table text-light">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Coordinates</th>
+                <th>Position</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var mapPoint in Model)
+            {
+                <tr>
+                    <td>@mapPoint.Name</td>
+                    <td>@mapPoint.Coordinates</td>
+                    <td>@mapPoint.Position</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

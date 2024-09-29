@@ -1,0 +1,50 @@
+﻿@page
+@model MinecraftTrackerObjects.MapPoint
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Explicitly setting the layout
+    //ViewData["Title"] = "Add new Map Points";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Add new Map Points!</h1>
+</div>
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Add new minecraft point</h3>
+                    <p>Fill in the data below.</p>
+                    <form class="requires-validation" asp-controller="MapPoint" asp-action="Add" method="post" novalidate>
+
+                        <div class="col-md-12">
+                            <input class="form-control" type="text" name="Name" placeholder="Point Name" required>
+                            <div class="valid-feedback">Username field is valid!</div>
+                            <div class="invalid-feedback">Username field cannot be blank!</div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <input class="form-control" type="email" name="Coordinates" placeholder="Coordinates" required>
+                            <div class="valid-feedback">Email field is valid!</div>
+                            <div class="invalid-feedback">Email field cannot be blank!</div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <select class="form-select mt-3" name="Position" required>
+                                <option value="Overworld">Overworld</option>
+                                <option value="Nether">Nether</option>
+                                <option value="End">End</option>
+                            </select>
+                            <div class="valid-feedback">You selected a position!</div>
+                            <div class="invalid-feedback">Please select a position!</div>
+                        </div>
+
+                        <div class="form-button mt-3">
+                            <button id="submit" type="submit" class="btn btn-primary">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
