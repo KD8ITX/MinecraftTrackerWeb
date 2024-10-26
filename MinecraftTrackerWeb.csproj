@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <Reference Include="MinecraftTrackerObjects">
-      <HintPath>..\..\tmp2\MinecraftTrackerObjects\bin\Debug\net8.0\MinecraftTrackerObjects.dll</HintPath>
+      <HintPath>..\MinecraftTrackerObjects\bin\Debug\net8.0\MinecraftTrackerObjects.dll</HintPath>
     </Reference>
   </ItemGroup>
 
