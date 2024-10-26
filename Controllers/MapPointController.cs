@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using MinecraftTrackerObjects;
 
 namespace MinecraftTrackerWeb.Controllers
@@ -8,10 +9,14 @@ namespace MinecraftTrackerWeb.Controllers
     public class MapPointController : Controller
     {
         private readonly MinecraftTrackerAppClient _mapPointService;
+        private readonly AppSettings _appSettings;
 
-        public MapPointController(MinecraftTrackerAppClient mapPointService)
+        public MapPointController(MinecraftTrackerAppClient mapPointService, IOptions<AppSettings> appSettings)
         {
             _mapPointService = mapPointService;
+            _appSettings = appSettings.Value;
+
+            _mapPointService.SetUrl(_appSettings.BaseUrl);
         }
 
         [HttpGet]

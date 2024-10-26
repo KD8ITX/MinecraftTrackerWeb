@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <Reference Include="MinecraftTrackerObjects">
-      <HintPath>..\MinecraftTrackerObjects\bin\Debug\net8.0\MinecraftTrackerObjects.dll</HintPath>
+      <HintPath>..\..\tmp2\MinecraftTrackerObjects\bin\Debug\net8.0\MinecraftTrackerObjects.dll</HintPath>
     </Reference>
   </ItemGroup>
 
